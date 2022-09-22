@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="SSHAgent Monitor Windows Service" Language="1033" Version="1.0.0.0" Manufacturer="Martin Schneider" UpgradeCode="fdcfc4e2-6e78-46b9-9919-4041a5e5756d">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+    <UIRef Id="WixUI_Mondo" />
+    
+		<Feature Id="ProductFeature" Title="SSHAgent Monitor Windows Service" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="HeatGenerated" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="SetupWindowsService" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			 <Component Id="ProductComponent">
+         <File
+           Id="filF144D8FF45307EC3303B7F5F8E527D77"
+           Name="SSHAgentMonitor.exe"
+           DiskId="1"
+           Source="$(var.ProjectDir)deploy\service\SSHAgentMonitor.exe"
+           Vital="yes"
+           KeyPath="yes" />
+         <ServiceInstall
+           Id="ServiceInstaller"
+           Type="ownProcess"
+           Vital="yes"
+           Name="SSHAgentMonitor"
+           DisplayName="SSH Agent Monitor"
+           Description="Monitors ssh-agent.exe and kills it as soon as it exceeds common CPU usage limits causing the device to consume unnecessary amounts of power"
+           Start="auto"
+           Arguments=" /start SSHAgentMonitor"
+           Account="LocalSystem"
+           ErrorControl="normal"
+           Interactive="no" />
+         <ServiceControl
+           Id="StartService"
+           Stop="both"
+           Start="install"
+           Remove="uninstall"
+           Name="SSHAgentMonitor"
+           Wait="yes" />
+			 </Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
