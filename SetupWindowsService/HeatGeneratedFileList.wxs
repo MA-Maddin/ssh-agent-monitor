@@ -53,6 +53,9 @@
             <Component Id="cmp1ED5B5DCD1725E69F71E98865BCEAAB9" Guid="*">
                 <File Id="filD0586081609434942EDB53299EF52D71" KeyPath="yes" Source="$(var.HarvestPath)\Microsoft.Extensions.Hosting.dll" />
             </Component>
+            <Component Id="cmpFD16E629F3B1C17887ACD3B97583CB13" Guid="*">
+                <File Id="filEFB595E81CA62CF58EF39208C76F7F06" KeyPath="yes" Source="$(var.HarvestPath)\Microsoft.Extensions.Hosting.WindowsServices.dll" />
+            </Component>
             <Component Id="cmp8C674FD6A69988A60A77A4CEE0F53781" Guid="*">
                 <File Id="fil72342637E9F74EE945317D4603CEBA2F" KeyPath="yes" Source="$(var.HarvestPath)\Microsoft.Extensions.Logging.Abstractions.dll" />
             </Component>
@@ -119,6 +122,9 @@
             <Component Id="cmp5CC6136D6E2A90DE115411181360DDDC" Guid="*">
                 <File Id="fil207371132F5873BD864FD57447824213" KeyPath="yes" Source="$(var.HarvestPath)\System.Security.Permissions.dll" />
             </Component>
+            <Component Id="cmp3C5190B580EDFB87D0BC5E835BB950DE" Guid="*">
+                <File Id="fil0B6369FF78F990F18A525D5F0CC6D1AB" KeyPath="yes" Source="$(var.HarvestPath)\System.ServiceProcess.ServiceController.dll" />
+            </Component>
             <Component Id="cmp7A71D580195DAAACCB57D588C484657A" Guid="*">
                 <File Id="fil00EFB213307938756EDF494BE5BB3249" KeyPath="yes" Source="$(var.HarvestPath)\System.Windows.Extensions.dll" />
             </Component>
@@ -143,6 +149,7 @@
             <ComponentRef Id="cmp1E5A63B6F657DD090469973A1C3D2C59" />
             <ComponentRef Id="cmpB96239F931804879A085E057C6E72657" />
             <ComponentRef Id="cmp1ED5B5DCD1725E69F71E98865BCEAAB9" />
+            <ComponentRef Id="cmpFD16E629F3B1C17887ACD3B97583CB13" />
             <ComponentRef Id="cmp8C674FD6A69988A60A77A4CEE0F53781" />
             <ComponentRef Id="cmp9B211F39744547E733F9040027FF1A3B" />
             <ComponentRef Id="cmp60BA3AB6448C5A0208FEDA4F886EDDE8" />
@@ -165,6 +172,7 @@
             <ComponentRef Id="cmp08EBD8C605FF27A4F0FCEC5A1317087B" />
             <ComponentRef Id="cmp9D1519D872AF6E420B3F121C523F1D76" />
             <ComponentRef Id="cmp5CC6136D6E2A90DE115411181360DDDC" />
+            <ComponentRef Id="cmp3C5190B580EDFB87D0BC5E835BB950DE" />
             <ComponentRef Id="cmp7A71D580195DAAACCB57D588C484657A" />
         </ComponentGroup>
     </Fragment>
