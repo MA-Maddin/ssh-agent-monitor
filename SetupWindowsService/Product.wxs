@@ -41,7 +41,7 @@
            Description="Monitors ssh-agent.exe and kills it as soon as it exceeds common CPU usage limits causing the device to consume unnecessary amounts of power"
            Start="auto"
            Arguments=" /start SSHAgentMonitor"
-           Account="NT AUTHORITY\LocalService"
+           Account="LocalSystem"
            ErrorControl="normal"
            Interactive="no" />
          <ServiceControl

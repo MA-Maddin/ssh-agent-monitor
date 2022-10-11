@@ -7,6 +7,7 @@
     <UserSecretsId>dotnet-SSHAgentMonitor-06157650-AE3C-4006-8715-A824B2067AC7</UserSecretsId>
     <Platforms>AnyCPU;x86</Platforms>
     <Authors>Martin Schneider</Authors>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
