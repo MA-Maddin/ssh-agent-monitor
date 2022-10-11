@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="SSH Agent Monitor" Language="1033" Version="1.0.0.0" Manufacturer="Martin Schneider" UpgradeCode="fdcfc4e2-6e78-46b9-9919-4041a5e5756d">
+	<Product Id="*" Name="SSH Agent Monitor" Language="1033" Version="!(bind.FileVersion.filF144D8FF45307EC3303B7F5F8E527D77)" Manufacturer="Martin Schneider" UpgradeCode="fdcfc4e2-6e78-46b9-9919-4041a5e5756d">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
